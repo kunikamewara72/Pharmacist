@@ -1,0 +1,36 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="80" 
+  height="80" 
+  viewBox="0 0 80 80"
+  fill="none"
+  stroke-width="0"
+>
+  <!-- Circle representing healthcare -->
+  <circle cx="40" cy="40" r="38" fill="#001F54" />
+
+  <!-- Nest-like pattern -->
+  <path
+    d="M15,40 Q40,5 65,40 Q40,75 15,40 Z"
+    fill="#FAFAFA"
+    stroke="#001A40"
+    stroke-width="1.5"
+  />
+
+  <!-- Cross symbol -->
+  <rect x="35" y="24" width="8" height="32" fill="#FAFAFA" />
+  <rect x="24" y="35" width="32" height="8" fill="#FAFAFA" />
+
+  <!-- Text for MediNest -->
+  <text
+    x="50%"
+    y="88%"
+    text-anchor="middle"
+    fill="#FAFAFA"
+    font-size="6"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+  >
+    MediNest
+  </text>
+</svg>
