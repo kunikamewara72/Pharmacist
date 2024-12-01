@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setToken(false);
-    navigate('/login'); // Redirect to login page on logout
+    navigate('/login');
   };
 
   return (
@@ -67,10 +67,7 @@ const Navbar = () => {
       {/* Button/Profile Section */}
       <div style={buttonSectionStyle}>
         {token ? (
-          <div
-            style={profileContainerStyle}
-            onClick={toggleDropdown}
-          >
+          <div style={profileContainerStyle} onClick={toggleDropdown}>
             <img
               src={assets.profile_pic}
               alt="Profile"
@@ -85,15 +82,21 @@ const Navbar = () => {
               <div style={dropdownMenuStyle}>
                 <p
                   style={dropdownItemStyle}
-                  onClick={() => navigate('/profile')}
+                  onClick={() => {
+                    setShowDropdown(false);
+                    navigate('/profile');
+                  }}
                 >
                   My Profile
                 </p>
                 <p
                   style={dropdownItemStyle}
-                  onClick={() => navigate('/appointments')}
+                  onClick={() => {
+                    setShowDropdown(false);
+                    navigate('/appointments');
+                  }}
                 >
-                   Appointments
+                  Appointments
                 </p>
                 <p
                   style={dropdownItemStyle}

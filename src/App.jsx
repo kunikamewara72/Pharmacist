@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import MyProfile from './pages/Myprofile';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -24,7 +25,12 @@ const App = () => {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/appointment/:pharmacistId" element={<Appointment />} />
+        <Route path="/pharmacists/:speciality?" element={<Pharmacist />} />
+        <Route path="/appointment/:docId" element={<Appointment />} />
+
+
       </Routes>
+      <Footer/>
     </div>
   );
 };

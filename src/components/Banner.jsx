@@ -1,24 +1,34 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { assets } from '../assets/assets';
 
 export const Banner = () => {
+  const navigate = useNavigate();
+
   // Inline styles
   const containerStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '20px',
-    backgroundColor: '#f0f8ff', // Light shade background (Alice Blue)
+    backgroundColor: '#f0f8ff', // Light shade background
   };
 
   const leftSideStyle = {
     maxWidth: '50%',
   };
 
-  const textStyle = {
+  const headerTextStyle = {
+    fontWeight: 'bold', // Make it bold
+    fontSize: '2rem', // Bigger font size
+    color: '#333', // Dark text color
+    margin: '5px 0',
+  };
+
+  const subTextStyle = {
     margin: '5px 0',
     fontSize: '1.2rem',
-    color: '#333',
+    color: '#555',
   };
 
   const buttonStyle = {
@@ -49,11 +59,15 @@ export const Banner = () => {
       {/* Left Side */}
       <div style={leftSideStyle}>
         <div>
-          <p style={textStyle}>Book Appointment</p>
-          <p style={textStyle}>With 100+ Trusted Pharmacists</p>
+          <p style={headerTextStyle}>Book Appointment</p>
+          <p style={subTextStyle}>With 100+ Trusted Pharmacists</p>
         </div>
         <button
           style={buttonStyle}
+          onClick={() => {
+            navigate('/login'); // Navigate to login page
+            window.scrollTo(0, 0); // Scroll to the top of the page
+          }}
           onMouseOver={(e) => (e.target.style.backgroundColor = buttonHoverStyle.backgroundColor)}
           onMouseOut={(e) => (e.target.style.backgroundColor = buttonStyle.backgroundColor)}
         >
@@ -74,4 +88,5 @@ export const Banner = () => {
 };
 
 export default Banner;
+
 

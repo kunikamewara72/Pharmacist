@@ -13,6 +13,7 @@ export const TopPharmacist = ({ professionals: propProfessionals }) => {
     <div style={containerStyle}>
       <h1 style={headerStyle}>Top Pharmacist to Book</h1>
       <p style={subTextStyle}>
+
         Simply browse through our extensive list of trusted Pharmacists.
       </p>
 
@@ -27,7 +28,8 @@ export const TopPharmacist = ({ professionals: propProfessionals }) => {
               animationDelay: `${index * 0.1}s`, // Staggered animation delay
             }}
           >
-            <img
+            <img onClick={()=>navigate('/')}
+
               src={item.image}
               alt={item.name}
               className="animated-image" // Animation class for the image
